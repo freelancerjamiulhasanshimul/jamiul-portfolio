@@ -12,6 +12,7 @@ import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import TechStack from "@/components/TechStack";
 import GridBackground from "@/components/fx/GridBackground";
+import ScrollProgress from "@/components/fx/ScrollProgress";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       >
         Skip to content
       </a>
+      <ScrollProgress />
       <GridBackground />
       <Navbar />
       <main id="main" className="relative z-[3]">
