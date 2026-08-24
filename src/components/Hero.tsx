@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { site } from "@/lib/data";
+import { quickFacts, site } from "@/lib/data";
 
 export default function Hero() {
   return (
@@ -17,8 +17,11 @@ export default function Hero() {
           </p>
 
           <h1 className="mt-7 font-display text-[clamp(2.9rem,7.5vw,5.4rem)] font-semibold leading-[1.05] tracking-tight text-ink">
-            <span className="block">Jamiul H.</span>
-            <span className="block italic text-accent">Shimul</span>
+            <span className="block italic text-[0.42em] font-medium leading-snug text-soft">
+              {site.headline}
+            </span>
+            <span className="mt-2 block italic text-accent">{site.headlineAccent}</span>
+            <span className="mt-4 block not-italic">Jamiul H. Shimul</span>
           </h1>
 
           <p className="mt-6 text-lg font-medium text-soft">
@@ -58,6 +61,15 @@ export default function Hero() {
               </span>
             </a>
           </div>
+
+          <ul className="mt-10 flex flex-wrap gap-x-7 gap-y-2.5">
+            {quickFacts.map((fact) => (
+              <li key={fact} className="flex items-center gap-2 text-sm font-medium text-soft">
+                <span className="h-1 w-1 rounded-full bg-sage" aria-hidden="true" />
+                {fact}
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="relative mx-auto w-full max-w-[400px] lg:max-w-[420px]">

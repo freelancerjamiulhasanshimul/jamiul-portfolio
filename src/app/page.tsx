@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import CtaBand from "@/components/CtaBand";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Leadership from "@/components/Leadership";
@@ -33,6 +34,7 @@ export default function Home() {
         <Process />
         <Leadership />
         <Testimonials />
+        <CtaBand />
         <Contact />
       </main>
       <Footer />

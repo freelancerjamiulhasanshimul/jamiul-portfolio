@@ -24,6 +24,7 @@ export default function Services() {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-3 font-display text-2xl font-semibold text-ink">{service.title}</h3>
+                <p className="mt-1.5 text-sm font-medium text-accent">{service.audience}</p>
                 <p className="mt-3 text-[0.95rem] leading-relaxed text-soft">{service.description}</p>
 
                 <p className="mt-6 text-xs font-semibold uppercase tracking-wide text-faint">
@@ -53,6 +54,7 @@ export default function Services() {
                   <h3 className="mt-3 font-display text-2xl font-semibold text-ink md:text-3xl">
                     {services[4].title}
                   </h3>
+                  <p className="mt-1.5 text-sm font-medium text-accent">{services[4].audience}</p>
                   <p className="mt-4 max-w-2xl text-[0.95rem] leading-relaxed text-soft md:text-base">
                     {services[4].description}
                   </p>

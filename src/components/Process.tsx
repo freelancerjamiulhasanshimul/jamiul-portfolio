@@ -9,7 +9,7 @@ export default function Process() {
         <Reveal>
           <SectionHeading
             eyebrow="How I work"
-            lines={["From First Call", "To Launch."]}
+            lines={["How I Work", "With Every Client."]}
           />
         </Reveal>
 
@@ -39,7 +39,9 @@ export default function Process() {
                     {i + 1}
                   </span>
 
-                  <h3 className="font-display text-xl font-semibold text-ink">{step.title}</h3>
+                  <h3 className="max-w-xs font-display text-xl font-semibold leading-snug text-ink">
+                    {step.title}
+                  </h3>
                   <p className="mt-2.5 max-w-xs text-sm leading-relaxed text-soft">
                     {step.description}
                   </p>

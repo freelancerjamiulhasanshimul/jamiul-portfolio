@@ -1,6 +1,8 @@
 export const site = {
   name: "Jamiul H. Shimul",
   role: "Full Stack Web Developer & AI Automation Specialist",
+  headline: "I help businesses look sharp online — and",
+  headlineAccent: "work smarter behind the scenes.",
   statement:
     "I build websites, online stores, and smart automations that solve real problems — and I make the process feel easy from first call to launch.",
   description:
@@ -9,6 +11,12 @@ export const site = {
   webrayzUrl: "https://webrayz.com/",
   location: "Bangladesh · Working with clients worldwide",
 };
+
+export const quickFacts = [
+  "25+ projects delivered",
+  "Websites · Stores · Automations",
+  "Trusted by clients worldwide",
+];
 
 export const navLinks = [
   { label: "Home", href: "#home" },
@@ -95,6 +103,7 @@ export const skillGroups = [
 export const services = [
   {
     title: "WordPress Development",
+    audience: "For businesses that want a site they can update themselves.",
     description:
       "A beautiful, easy-to-manage WordPress website built around your business — fast, flexible, and ready to grow with you.",
     capabilities: [
@@ -107,6 +116,7 @@ export const services = [
   },
   {
     title: "Custom Website Development",
+    audience: "For ideas that don't fit a template.",
     description:
       "A website designed and built from scratch for exactly what you need — no templates, no compromises, clean code throughout.",
     capabilities: [
@@ -119,6 +129,7 @@ export const services = [
   },
   {
     title: "E-Commerce Solutions",
+    audience: "For sellers ready to grow beyond marketplaces.",
     description:
       "An online store your customers will love using — from browsing to checkout — and that you can manage without a headache.",
     capabilities: [
@@ -131,6 +142,7 @@ export const services = [
   },
   {
     title: "Web Applications",
+    audience: "For processes that have outgrown spreadsheets.",
     description:
       "Web apps built around how your business actually works — booking systems, dashboards, portals, and everything in between.",
     capabilities: [
@@ -143,6 +155,7 @@ export const services = [
   },
   {
     title: "AI Automation",
+    audience: "For teams spending hours on work a machine should do.",
     description:
       "If your team spends hours on repetitive tasks, automation can give them that time back. I design AI-powered workflows that connect your tools and handle the busywork — reliably and quietly in the background.",
     capabilities: [
@@ -162,6 +175,7 @@ export const projects = [
   {
     category: "SaaS Platform",
     title: "NexaFlow",
+    outcome: "Helping teams spend less time managing projects — and more time doing them.",
     description:
       "A streamlined project management platform designed to help modern teams organize workflows, track performance, and collaborate efficiently.",
     stack: "React · Node.js · MongoDB",
@@ -174,6 +188,7 @@ export const projects = [
   {
     category: "E-Commerce",
     title: "UrbanCart",
+    outcome: "A store built to turn browsers into buyers, and make management effortless.",
     description:
       "A modern e-commerce experience focused on intuitive product discovery, optimized checkout, and seamless store management.",
     stack: "WordPress · WooCommerce · PHP",
@@ -186,6 +201,7 @@ export const projects = [
   {
     category: "Digital Agency",
     title: "Elevate Digital",
+    outcome: "Turning services and expertise into a website that wins qualified leads.",
     description:
       "A high-end agency website designed to showcase services, expertise, and generate qualified leads.",
     stack: "Next.js · JavaScript · API Integration",
@@ -198,6 +214,7 @@ export const projects = [
   {
     category: "AI Automation",
     title: "FlowSync AI",
+    outcome: "Connecting everyday tools so repetitive work takes care of itself.",
     description:
       "An intelligent workflow automation system designed to connect business tools, automate repetitive processes, and use AI-powered systems to improve workflow efficiency.",
     stack: "AI Integration · API Automation · Workflow Design · Data Processing",
@@ -211,24 +228,24 @@ export const projects = [
 
 export const processSteps = [
   {
-    title: "Discover",
+    title: "I start with your goals, not the deliverables.",
     description:
-      "We start with a real conversation about your goals, your audience, and the challenges you're facing.",
+      "Before deciding what to build, I get clear on your business, your audience, and what success looks like for you.",
   },
   {
-    title: "Plan",
+    title: "You'll always know where things stand.",
     description:
-      "I map out the right technology and approach, and you get a clear plan with timeline and pricing.",
+      "Regular updates and honest timelines — no chasing me for progress, and no surprises at the end.",
   },
   {
-    title: "Build",
+    title: "I bring ideas, not just execution.",
     description:
-      "I design and develop your website, store, or automation — with regular check-ins so you're never left guessing.",
+      "I'll share what I think the right move is, and why. The final call is always yours — but you won't be making it alone.",
   },
   {
-    title: "Launch & Support",
+    title: "I adapt to the way you work.",
     description:
-      "We test and polish everything together, launch with confidence, and I stay available after go-live.",
+      "Every client is different. We'll find a rhythm that fits your schedule, your tools, and your pace.",
   },
 ];
 

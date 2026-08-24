@@ -165,6 +165,9 @@ export default function Projects() {
                     <h3 className="mt-2.5 font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl">
                       {project.title}
                     </h3>
+                    <p className="mt-3 max-w-lg font-display text-xl italic leading-snug text-accent md:text-2xl">
+                      {project.outcome}
+                    </p>
                     <p className="mt-4 max-w-lg text-[0.95rem] leading-relaxed text-soft md:text-base">
                       {project.description}
                     </p>

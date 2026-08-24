@@ -20,10 +20,16 @@ export default function Footer() {
             <p className="mt-4 font-display text-lg font-semibold text-ink">{site.name}</p>
             <p className="mt-1 max-w-xs text-sm leading-relaxed text-soft">{site.role}</p>
             <a
+              href={`mailto:${contacts.professionalEmail}`}
+              className="mt-2 inline-block text-sm font-medium text-accent underline decoration-accent/30 underline-offset-4 transition-colors hover:decoration-accent"
+            >
+              {contacts.professionalEmail}
+            </a>
+            <a
               href={site.webrayzUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-2 text-sm text-soft transition-colors duration-300 hover:text-accent"
+              className="mt-3 flex items-center gap-2 text-sm text-soft transition-colors duration-300 hover:text-accent"
             >
               <WebrayzLogo className="h-5 w-5" />
               Managing Director, Webrayz IT Solutions
