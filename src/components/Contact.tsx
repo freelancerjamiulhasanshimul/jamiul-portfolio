@@ -86,7 +86,7 @@ export default function Contact() {
                       {...(channel.href.startsWith("http")
                         ? { target: "_blank", rel: "noopener noreferrer" }
                         : {})}
-                      className="card card-hover flex items-center justify-between px-5 py-4"
+                      className="card card-hover group flex items-center justify-between px-5 py-4"
                     >
                       <span className="flex items-center gap-3.5">
                         <span
@@ -110,15 +110,21 @@ export default function Contact() {
             </Reveal>
 
             <Reveal delay={340}>
-              <p className="mt-7 flex items-center gap-2 text-sm text-faint">
-                <span className="h-1.5 w-1.5 rounded-full bg-sage" aria-hidden="true" />
-                Usually replies within 24 hours · {site.location}
-              </p>
+              <div className="mt-7 space-y-1.5 text-sm text-faint">
+                <p className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-sage" aria-hidden="true" />
+                  Usually replies within 24 hours
+                </p>
+                <p className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent/60" aria-hidden="true" />
+                  {site.location}
+                </p>
+              </div>
             </Reveal>
           </div>
 
-          <Reveal delay={150}>
-            <form onSubmit={handleSubmit} className="card space-y-6 p-7 md:p-10" aria-label="Contact form">
+          <Reveal delay={150} className="h-full">
+            <form onSubmit={handleSubmit} className="card flex h-full flex-col space-y-6 p-7 md:p-10" aria-label="Contact form">
               <p className="text-sm font-medium text-soft">
                 Tell me a little about your project — I&rsquo;ll reply personally.
               </p>
@@ -164,7 +170,7 @@ export default function Contact() {
                 />
               </label>
 
-              <div className="flex flex-wrap items-center gap-5 pt-1">
+              <div className="flex flex-wrap items-center gap-5 pt-1 mt-auto">
                 <button type="submit" className="btn-primary group cursor-pointer">
                   {status === "sent" ? "Opening your email app…" : "Send Message"}
                   <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
