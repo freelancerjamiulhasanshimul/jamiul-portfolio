@@ -170,13 +170,14 @@ export default function Contact() {
                 />
               </label>
 
-              <div className="flex flex-wrap items-center gap-5 pt-1 mt-auto">
+              <div className="mt-auto space-y-3 pt-1">
                 <button type="submit" className="btn-primary group cursor-pointer">
                   {status === "sent" ? "Opening your email app…" : "Send Message"}
                   <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </button>
-                <p className="max-w-[240px] text-xs leading-relaxed text-faint">
-                  This opens your email app with everything pre-filled — nothing is stored on this site.
+                <p className="text-xs leading-relaxed text-faint">
+                  When you send, your email app opens with everything pre-filled — just hit send there.
+                  Nothing is stored on this site, and I&rsquo;ll reply personally within 24 hours.
                 </p>
               </div>
             </form>
