@@ -6,6 +6,7 @@ const accents: Record<string, { bg: string; text: string }> = {
   accent: { bg: "bg-tint", text: "text-accent" },
   sage: { bg: "bg-sage-tint", text: "text-sage" },
   terracotta: { bg: "bg-terracotta-tint", text: "text-terracotta" },
+  honey: { bg: "bg-honey-tint", text: "text-honey" },
 };
 
 function GroupIcon({ id }: { id: string }) {

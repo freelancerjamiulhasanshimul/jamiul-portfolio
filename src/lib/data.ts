@@ -94,7 +94,7 @@ export const skillGroups = [
   {
     id: "tools",
     tag: "The details that make a site succeed",
-    accent: "sage" as const,
+    accent: "honey" as const,
     title: "Tools & Best Practices",
     items: ["Git", "SEO", "Performance optimization"],
   },

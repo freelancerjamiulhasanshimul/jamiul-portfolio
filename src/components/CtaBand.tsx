@@ -15,6 +15,10 @@ export default function CtaBand() {
               aria-hidden="true"
               className="absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-terracotta-tint"
             />
+            <span
+              aria-hidden="true"
+              className="absolute -bottom-10 right-10 h-24 w-24 rounded-full bg-honey-tint"
+            />
             <div className="relative">
               <h2 className="font-display text-3xl font-semibold leading-tight text-ink md:text-4xl">
                 Not sure where to start?

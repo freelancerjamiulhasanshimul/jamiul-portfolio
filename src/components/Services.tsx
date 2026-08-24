@@ -42,12 +42,12 @@ export default function Services() {
           ))}
 
           <Reveal delay={120} className="md:col-span-2">
-            <article className="card group relative h-full border-accent/25 bg-tint p-7 md:p-10">
+            <article className="card group relative h-full border-honey/25 bg-honey-tint p-7 md:p-10">
               <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
                 <div>
                   <span
                     aria-hidden="true"
-                    className="font-display text-4xl font-semibold italic text-accent/40"
+                    className="font-display text-4xl font-semibold italic text-honey"
                   >
                     05
                   </span>
@@ -65,7 +65,7 @@ export default function Services() {
                     {services[4].capabilities.map((cap) => (
                       <li
                         key={cap}
-                        className="chip border-accent/20 bg-paper text-accent"
+                        className="chip border-honey/30 bg-paper text-honey"
                       >
                         {cap}
                       </li>

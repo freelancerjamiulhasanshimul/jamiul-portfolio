@@ -20,7 +20,7 @@ export default function Hero() {
             <span className="block italic text-[0.42em] font-medium leading-snug text-soft">
               {site.headline}
             </span>
-            <span className="mt-2 block italic text-accent">{site.headlineAccent}</span>
+            <span className="mt-2 block italic text-honey">{site.headlineAccent}</span>
             <span className="mt-4 block not-italic">Jamiul H. Shimul</span>
           </h1>
 

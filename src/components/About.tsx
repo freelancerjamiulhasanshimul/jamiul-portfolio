@@ -35,7 +35,7 @@ export default function About() {
               <div className="relative mt-12 hidden max-w-sm lg:block">
                 <div
                   aria-hidden="true"
-                  className="absolute -right-4 -top-4 h-full w-full rotate-2 rounded-[1.6rem] bg-terracotta-tint"
+                  className="absolute -right-4 -top-4 h-full w-full rotate-2 rounded-[1.6rem] bg-honey-tint"
                 />
                 <div className="card relative overflow-hidden rounded-[1.6rem] !p-2.5">
                   <div className="relative overflow-hidden rounded-[1.2rem]">
