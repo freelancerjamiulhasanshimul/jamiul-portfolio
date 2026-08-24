@@ -20,9 +20,17 @@ export default function Contact() {
       "",
       `${data.get("message")}`,
     ].join("\n");
-    window.location.href = `mailto:${contacts.professionalEmail}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+      contacts.professionalEmail
+    )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const gmailWindow = window.open(gmailUrl, "_blank", "noopener,noreferrer");
+
+    if (!gmailWindow) {
+      window.location.href = `mailto:${contacts.professionalEmail}?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
+    }
     setStatus("sent");
   };
 
@@ -170,19 +178,19 @@ export default function Contact() {
             </label>
 
             <div className="space-y-3 pt-1 text-center">
-              <button type="submit" className="btn-primary group mx-auto w-full sm:w-auto sm:!px-12">
-                {status === "sent" ? "Opening your email app…" : "Send Message"}
-                <span
-                  aria-hidden="true"
-                  className="transition-transform duration-300 group-hover:translate-x-1"
-                >
-                  →
-                </span>
-              </button>
-              <p className="text-xs leading-relaxed text-faint">
-                When you send, your email app opens with everything pre-filled — just hit send
-                there. Nothing is stored on this site.
-              </p>
+                <button type="submit" className="btn-primary group mx-auto w-full sm:w-auto sm:!px-12">
+                  {status === "sent" ? "Opening Gmail…" : "Send Message"}
+                  <span
+                    aria-hidden="true"
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </button>
+                <p className="text-xs leading-relaxed text-faint">
+                  Send opens Gmail in a new tab with everything pre-filled — just hit send there.
+                  Nothing is stored on this site.
+                </p>
             </div>
           </form>
         </Reveal>

@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description: site.description,
     url: site.url,
     siteName: site.name,
-    images: [{ url: "/portrait.jpg", width: 820, height: 1457 }],
+    images: [{ url: "/portrait.jpg", width: 4096, height: 2308 }],
     locale: "en_US",
     type: "website",
   },

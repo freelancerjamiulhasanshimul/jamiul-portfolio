@@ -100,14 +100,33 @@ function AgencyVisual() {
 }
 
 function WorkflowNodeVisual() {
+  const paths = [
+    "M55 110 C 120 110, 130 45, 200 45",
+    "M55 110 C 120 110, 130 175, 200 175",
+    "M200 45 C 270 45, 280 110, 345 110",
+    "M200 175 C 270 175, 280 110, 345 110",
+  ];
   return (
     <svg viewBox="0 0 400 220" className="h-full w-full" aria-hidden="true">
       <g stroke="#4a6c8f" strokeWidth="1.1" fill="none" strokeDasharray="3 5" opacity="0.5">
-        <path d="M55 110 C 120 110, 130 45, 200 45" />
-        <path d="M55 110 C 120 110, 130 175, 200 175" />
-        <path d="M200 45 C 270 45, 280 110, 345 110" />
-        <path d="M200 175 C 270 175, 280 110, 345 110" />
+        {paths.map((d) => (
+          <path key={d} d={d} className="animate-dash-flow" />
+        ))}
       </g>
+
+      {paths.map((d, i) => (
+        <circle key={i} r="2.8" fill="#c08a2e" opacity="0.9">
+          <animateMotion dur={`${2.6 + i * 0.5}s`} repeatCount="indefinite" path={d} />
+          <animate
+            attributeName="opacity"
+            values="0;0.9;0.9;0"
+            keyTimes="0;0.15;0.85;1"
+            dur={`${2.6 + i * 0.5}s`}
+            repeatCount="indefinite"
+          />
+        </circle>
+      ))}
+
       {[
         { x: 55, y: 110, t: "CRM" },
         { x: 200, y: 45, t: "AI" },
@@ -116,16 +135,29 @@ function WorkflowNodeVisual() {
       ].map((n) => (
         <g key={n.t}>
           <circle cx={n.x} cy={n.y} r="13" fill="#ffffff" stroke="#4a6c8f" strokeOpacity="0.45" />
-          <circle cx={n.x} cy={n.y} r="4" fill="#4a6c8f" opacity="0.7" />
+          <circle cx={n.x} cy={n.y} r="4" fill="#4a6c8f" className="animate-node-pulse" />
           <text x={n.x} y={n.y - 22} textAnchor="middle" fill="#8a8f98" fontSize="10" fontWeight="500">
             {n.t}
           </text>
         </g>
       ))}
-      <rect x="150" y="96" rx="14" width="100" height="28" fill="#ecf1f6" stroke="#4a6c8f" strokeOpacity="0.35" />
-      <text x="200" y="114" textAnchor="middle" fill="#4a6c8f" fontSize="10" fontWeight="600">
-        Automated ✓
-      </text>
+
+      <g>
+        <rect
+          x="150"
+          y="96"
+          rx="14"
+          width="100"
+          height="28"
+          fill="#ecf1f6"
+          stroke="#4a6c8f"
+          strokeOpacity="0.35"
+          className="animate-badge-glow"
+        />
+        <text x="200" y="114" textAnchor="middle" fill="#4a6c8f" fontSize="10" fontWeight="600">
+          Automated ✓
+        </text>
+      </g>
     </svg>
   );
 }
