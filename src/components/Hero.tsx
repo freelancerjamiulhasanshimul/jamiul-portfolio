@@ -16,20 +16,20 @@ export default function Hero() {
             Available for new projects
           </p>
 
-          <h1 className="mt-7 font-display text-[clamp(2.9rem,7.5vw,5.4rem)] font-semibold leading-[1.05] tracking-tight text-ink">
-            <span className="block italic text-[0.42em] font-medium leading-snug text-soft">
-              {site.headline}
-            </span>
-            <span className="mt-2 block italic text-honey">{site.headlineAccent}</span>
-            <span className="mt-4 block not-italic">Jamiul H. Shimul</span>
+          <h1 className="mt-6 font-display text-[clamp(2.4rem,5.5vw,3.9rem)] font-semibold leading-[1.08] tracking-tight text-ink">
+            Jamiul H. <span className="italic text-accent">Shimul</span>
           </h1>
 
-          <p className="mt-6 text-lg font-medium text-soft">
+          <p className="mt-3 max-w-xl font-display text-xl italic leading-snug text-honey md:text-2xl">
+            {site.headline} {site.headlineAccent}
+          </p>
+
+          <p className="mt-4 text-base font-medium text-soft">
             Full Stack Web Developer <span className="text-faint">&</span> AI Automation Specialist
           </p>
 
-          <div className="mt-5 flex items-center gap-3" aria-hidden="true">
-            <span className="h-px w-12 bg-accent/40" />
+          <div className="mt-4 flex items-center gap-3" aria-hidden="true">
+            <span className="h-px w-10 bg-accent/40" />
             <p className="text-sm text-faint">
               Managing Director at{" "}
               <a
@@ -43,11 +43,12 @@ export default function Hero() {
             </p>
           </div>
 
-          <p className="mt-7 max-w-xl text-base leading-relaxed text-soft sm:text-lg">
-            {site.statement}
+          <p className="mt-5 max-w-lg text-[0.95rem] leading-relaxed text-soft">
+            Websites, online stores, and smart automations that solve real problems — with a process
+            that feels easy from first call to launch.
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+          <div className="mt-7 flex flex-wrap items-center gap-4">
             <a href="#contact" className="btn-primary group">
               Work With Me
               <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">
@@ -62,9 +63,9 @@ export default function Hero() {
             </a>
           </div>
 
-          <ul className="mt-10 flex flex-wrap gap-x-7 gap-y-2.5">
+          <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
             {quickFacts.map((fact) => (
-              <li key={fact} className="flex items-center gap-2 text-sm font-medium text-soft">
+              <li key={fact} className="flex items-center gap-2 text-[13px] font-medium text-soft">
                 <span className="h-1 w-1 rounded-full bg-sage" aria-hidden="true" />
                 {fact}
               </li>
