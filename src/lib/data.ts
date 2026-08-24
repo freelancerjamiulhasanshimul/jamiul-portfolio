@@ -1,23 +1,22 @@
 export const site = {
   name: "Jamiul H. Shimul",
   role: "Full Stack Web Developer & AI Automation Specialist",
-  designation: "MANAGING DIRECTOR — WEBRAYZ IT SOLUTIONS",
   statement:
-    "Building scalable web solutions and intelligent automation systems where technology, strategy, and human-centered thinking connect.",
+    "I build websites, online stores, and smart automations that solve real problems — and I make the process feel easy from first call to launch.",
   description:
-    "Portfolio of Jamiul H. Shimul — Full Stack Web Developer and AI Automation Specialist, Managing Director at Webrayz IT Solutions.",
-  url: "https://your-domain.com",
+    "Jamiul H. Shimul is a Full Stack Web Developer and AI Automation Specialist, and the Managing Director of Webrayz IT Solutions, helping businesses grow through thoughtful web development and automation.",
+  url: "https://jamiul-portfolio-sigma.vercel.app",
   webrayzUrl: "https://webrayz.com/",
-  location: "Bangladesh · Available Worldwide",
+  location: "Bangladesh · Working with clients worldwide",
 };
 
 export const navLinks = [
-  { label: "HOME", href: "#home" },
-  { label: "ABOUT", href: "#about" },
-  { label: "EXPERTISE", href: "#expertise" },
-  { label: "SERVICES", href: "#services" },
-  { label: "WORK", href: "#work" },
-  { label: "CONTACT", href: "#contact" },
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Expertise", href: "#expertise" },
+  { label: "Services", href: "#services" },
+  { label: "Work", href: "#work" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export const contacts = {
@@ -36,43 +35,43 @@ export const contacts = {
 export type Metric = { label: string; value: number; suffix?: string };
 
 export const metrics: Metric[] = [
-  { label: "PROJECTS.DELIVERED", value: 25, suffix: "+" },
-  { label: "TECHNOLOGIES & TOOLS", value: 15, suffix: "+" },
-  { label: "AUTOMATION.SYSTEMS", value: 10, suffix: "+" },
-  { label: "QUALITY.FOCUS", value: 100, suffix: "%" },
+  { label: "Projects delivered", value: 25, suffix: "+" },
+  { label: "Technologies & tools", value: 15, suffix: "+" },
+  { label: "Automation systems", value: 10, suffix: "+" },
+  { label: "Commitment to quality", value: 100, suffix: "%" },
 ];
 
 export const skillGroups = [
   {
     id: "web",
-    tag: "STACK.CORE",
-    accent: "mint" as const,
+    tag: "The foundations of every site I build",
+    accent: "accent" as const,
     title: "Web Development",
     items: ["HTML5", "CSS3", "JavaScript", "React", "Next.js", "PHP"],
   },
   {
     id: "backend",
-    tag: "STACK.SERVER",
-    accent: "azure" as const,
-    title: "Backend & Integration",
-    items: ["Node.js", "MySQL", "REST APIs", "Third-Party API Integration"],
+    tag: "Connecting your site to the services it needs",
+    accent: "sage" as const,
+    title: "Backend & Integrations",
+    items: ["Node.js", "MySQL", "REST APIs", "Third-party integrations"],
   },
   {
     id: "ai",
-    tag: "STACK.INTELLIGENCE",
-    accent: "violet" as const,
+    tag: "Saving you time on the work that repeats itself",
+    accent: "accent" as const,
     title: "AI & Automation",
     items: [
-      "AI-Powered Workflows",
-      "AI Integrations",
-      "Business Process Automation",
-      "Intelligent Assistants",
+      "AI-powered workflows",
+      "AI integrations",
+      "Business process automation",
+      "Intelligent assistants",
     ],
   },
   {
     id: "cms",
-    tag: "STACK.COMMERCE",
-    accent: "coral" as const,
+    tag: "Online stores and sites you can manage yourself",
+    accent: "terracotta" as const,
     title: "CMS & E-Commerce",
     items: [
       "WordPress",
@@ -86,80 +85,72 @@ export const skillGroups = [
   },
   {
     id: "tools",
-    tag: "STACK.OPS",
-    accent: "mint" as const,
-    title: "Tools & Optimization",
-    items: ["Git", "SEO", "Performance Optimization"],
+    tag: "The details that make a site succeed",
+    accent: "sage" as const,
+    title: "Tools & Best Practices",
+    items: ["Git", "SEO", "Performance optimization"],
   },
 ];
 
 export const services = [
   {
-    id: "MODULE_01",
     title: "WordPress Development",
     description:
-      "Custom, scalable WordPress websites designed for performance, flexibility, and growth.",
+      "A beautiful, easy-to-manage WordPress website built around your business — fast, flexible, and ready to grow with you.",
     capabilities: [
-      "Custom Themes",
-      "SEO Integration",
-      "Performance Optimization",
-      "Responsive Design",
+      "Custom themes",
+      "SEO setup",
+      "Performance tuning",
+      "Mobile-friendly design",
     ],
     featured: false,
   },
   {
-    id: "MODULE_02",
     title: "Custom Website Development",
     description:
-      "Purpose-built digital experiences using modern web technologies and clean development practices.",
+      "A website designed and built from scratch for exactly what you need — no templates, no compromises, clean code throughout.",
     capabilities: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Modern Frameworks",
-      "Responsive Development",
+      "Hand-crafted design",
+      "Modern frameworks",
+      "Responsive development",
+      "Clean, maintainable code",
     ],
     featured: false,
   },
   {
-    id: "MODULE_03",
     title: "E-Commerce Solutions",
     description:
-      "High-performing online stores built for seamless shopping experiences and efficient management.",
+      "An online store your customers will love using — from browsing to checkout — and that you can manage without a headache.",
     capabilities: [
-      "WooCommerce",
-      "Payment Integration",
-      "Product Management",
-      "Checkout Optimization",
+      "WooCommerce & Shopify",
+      "Payment setup",
+      "Product management",
+      "Checkout optimization",
     ],
     featured: false,
   },
   {
-    id: "MODULE_04",
     title: "Web Applications",
     description:
-      "Functional and scalable web applications designed around real business requirements.",
+      "Web apps built around how your business actually works — booking systems, dashboards, portals, and everything in between.",
     capabilities: [
-      "Frontend",
-      "Backend",
-      "APIs",
+      "Frontend & backend",
       "Databases",
-      "Custom Functionality",
+      "API development",
+      "Custom features",
     ],
     featured: false,
   },
   {
-    id: "MODULE_05",
-    title: "AI Automation & Intelligent Workflows",
+    title: "AI Automation",
     description:
-      "Design and implementation of intelligent automation systems that help businesses reduce repetitive work, connect digital tools, streamline workflows, and improve operational efficiency.",
+      "If your team spends hours on repetitive tasks, automation can give them that time back. I design AI-powered workflows that connect your tools and handle the busywork — reliably and quietly in the background.",
     capabilities: [
-      "AI-Powered Workflows",
-      "Business Process Automation",
-      "API Integrations",
-      "Automated Data Processing",
-      "Intelligent Assistants",
-      "Workflow Optimization",
+      "AI-powered workflows",
+      "Process automation",
+      "App integrations",
+      "Data handling",
+      "Intelligent assistants",
     ],
     featured: true,
   },
@@ -169,53 +160,49 @@ export type ProjectVisual = "dashboard" | "storefront" | "agency" | "workflow";
 
 export const projects = [
   {
-    id: "PROJECT_001",
-    category: "CATEGORY / SAAS PLATFORM",
+    category: "SaaS Platform",
     title: "NexaFlow",
     description:
       "A streamlined project management platform designed to help modern teams organize workflows, track performance, and collaborate efficiently.",
     stack: "React · Node.js · MongoDB",
-    primary: "OPEN PROJECT ↗",
-    secondary: "VIEW SOURCE ↗",
+    primary: "View Case Study",
+    secondary: "View Source",
     href: "#",
     sourceHref: "#",
     visual: "dashboard" as ProjectVisual,
   },
   {
-    id: "PROJECT_002",
-    category: "CATEGORY / E-COMMERCE",
+    category: "E-Commerce",
     title: "UrbanCart",
     description:
       "A modern e-commerce experience focused on intuitive product discovery, optimized checkout, and seamless store management.",
     stack: "WordPress · WooCommerce · PHP",
-    primary: "OPEN PROJECT ↗",
-    secondary: "VIEW SOURCE ↗",
+    primary: "View Case Study",
+    secondary: "View Source",
     href: "#",
     sourceHref: "#",
     visual: "storefront" as ProjectVisual,
   },
   {
-    id: "PROJECT_003",
-    category: "CATEGORY / DIGITAL AGENCY",
+    category: "Digital Agency",
     title: "Elevate Digital",
     description:
       "A high-end agency website designed to showcase services, expertise, and generate qualified leads.",
     stack: "Next.js · JavaScript · API Integration",
-    primary: "OPEN PROJECT ↗",
-    secondary: "VIEW SOURCE ↗",
+    primary: "View Case Study",
+    secondary: "View Source",
     href: "#",
     sourceHref: "#",
     visual: "agency" as ProjectVisual,
   },
   {
-    id: "PROJECT_004",
-    category: "CATEGORY / AI AUTOMATION",
+    category: "AI Automation",
     title: "FlowSync AI",
     description:
       "An intelligent workflow automation system designed to connect business tools, automate repetitive processes, and use AI-powered systems to improve workflow efficiency.",
     stack: "AI Integration · API Automation · Workflow Design · Data Processing",
-    primary: "OPEN PROJECT ↗",
-    secondary: "VIEW SYSTEM ↗",
+    primary: "View Case Study",
+    secondary: "View Details",
     href: "#",
     sourceHref: "#",
     visual: "workflow" as ProjectVisual,
@@ -224,58 +211,58 @@ export const projects = [
 
 export const processSteps = [
   {
-    id: "01 / DISCOVER",
+    title: "Discover",
     description:
-      "Analyze goals, requirements, users, workflows, and technical challenges.",
+      "We start with a real conversation about your goals, your audience, and the challenges you're facing.",
   },
   {
-    id: "02 / STRATEGIZE",
+    title: "Plan",
     description:
-      "Define the structure, technology, automation opportunities, and development roadmap.",
+      "I map out the right technology and approach, and you get a clear plan with timeline and pricing.",
   },
   {
-    id: "03 / BUILD",
+    title: "Build",
     description:
-      "Develop scalable websites, applications, integrations, or automation systems.",
+      "I design and develop your website, store, or automation — with regular check-ins so you're never left guessing.",
   },
   {
-    id: "04 / REFINE",
+    title: "Launch & Support",
     description:
-      "Test, optimize, automate, improve, and prepare the solution for deployment.",
+      "We test and polish everything together, launch with confidence, and I stay available after go-live.",
   },
 ];
 
 export const leadershipPoints = [
-  "Project Coordination",
-  "Client Communication",
-  "Team Collaboration",
-  "Digital Strategy",
-  "Technical Understanding",
-  "Quality-Focused Delivery",
+  "Project coordination",
+  "Client communication",
+  "Team collaboration",
+  "Digital strategy",
+  "Technical guidance",
+  "Quality-focused delivery",
 ];
 
 export const testimonials = [
   {
     quote:
-      "Placeholder testimonial — replace with a real client quote about reliability, communication, and delivery quality.",
+      "This is a placeholder — replace it with a real client quote about working together, communication, and results.",
     name: "Client Name",
-    role: "Project Role",
+    role: "Founder",
     company: "Company Name",
     initials: "CN",
   },
   {
     quote:
-      "Placeholder testimonial — replace with feedback highlighting automation impact or development speed.",
+      "This is a placeholder — replace it with feedback about an automation project or a website build.",
     name: "Client Name",
-    role: "Project Role",
+    role: "Marketing Lead",
     company: "Company Name",
     initials: "CN",
   },
   {
     quote:
-      "Placeholder testimonial — replace with words about long-term collaboration and trusted partnership.",
+      "This is a placeholder — replace it with words about long-term collaboration and trusted partnership.",
     name: "Client Name",
-    role: "Project Role",
+    role: "Operations Manager",
     company: "Company Name",
     initials: "CN",
   },

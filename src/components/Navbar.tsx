@@ -43,7 +43,7 @@ export default function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled || open
-          ? "glass-strong border-b border-mint/10 shadow-[0_12px_40px_-16px_rgba(5,8,22,0.9)]"
+          ? "border-b border-line bg-paper/85 shadow-[0_8px_30px_-18px_rgba(43,43,43,0.15)] backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
       }`}
     >
@@ -61,8 +61,8 @@ export default function Navbar() {
             <li key={link.label}>
               <a
                 href={link.href}
-                className={`tech-label text-[11px] transition-colors duration-300 ${
-                  active === link.href ? "text-mint" : "text-secondary/80 hover:text-ink"
+                className={`text-[0.9rem] font-medium transition-colors duration-300 ${
+                  active === link.href ? "text-accent" : "text-soft hover:text-ink"
                 }`}
               >
                 {link.label}
@@ -72,14 +72,8 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-4">
-          <a
-            href="#contact"
-            className="gradient-frame tech-label group hidden items-center gap-2 rounded-lg px-5 py-2.5 text-[11px] font-semibold text-mint transition-shadow duration-300 hover:shadow-[0_0_28px_-6px_rgba(127,224,210,0.35)] lg:inline-flex"
-          >
-            START A PROJECT
-            <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-              ↗
-            </span>
+          <a href="#contact" className="btn-primary hidden !px-5 !py-2.5 !text-sm lg:inline-flex">
+            Let&rsquo;s Talk
           </a>
 
           <button
@@ -87,7 +81,7 @@ export default function Navbar() {
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label={open ? "Close menu" : "Open menu"}
-            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-lg border border-secondary/15 lg:hidden"
+            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-lg border border-line bg-paper"
           >
             <span
               className={`h-px w-5 bg-ink transition-transform duration-300 ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
@@ -101,7 +95,7 @@ export default function Navbar() {
 
       <div
         className={`overflow-hidden transition-[max-height,opacity] duration-500 lg:hidden ${
-          open ? "max-h-[420px] opacity-100" : "max-h-0 opacity-0"
+          open ? "max-h-[440px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <ul className="shell flex flex-col gap-1 pb-6 pt-2">
@@ -110,8 +104,10 @@ export default function Navbar() {
               <a
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className={`block rounded-lg px-3 py-3 font-tech text-sm tracking-[0.18em] transition-colors ${
-                  active === link.href ? "bg-surface/60 text-mint" : "text-secondary hover:bg-surface/40 hover:text-ink"
+                className={`block rounded-xl px-4 py-3 text-[0.95rem] font-medium transition-colors ${
+                  active === link.href
+                    ? "bg-tint text-accent"
+                    : "text-soft hover:bg-cream hover:text-ink"
                 }`}
               >
                 {link.label}
@@ -119,12 +115,8 @@ export default function Navbar() {
             </li>
           ))}
           <li className="pt-3">
-            <a
-              href="#contact"
-              onClick={() => setOpen(false)}
-              className="btn-primary w-full justify-center"
-            >
-              START A PROJECT ↗
+            <a href="#contact" onClick={() => setOpen(false)} className="btn-primary w-full">
+              Let&rsquo;s Talk
             </a>
           </li>
         </ul>

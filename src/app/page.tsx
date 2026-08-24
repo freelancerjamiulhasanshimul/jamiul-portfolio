@@ -10,7 +10,6 @@ import Projects from "@/components/Projects";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import TechStack from "@/components/TechStack";
-import CursorGlow from "@/components/fx/CursorGlow";
 import GridBackground from "@/components/fx/GridBackground";
 
 export default function Home() {
@@ -18,12 +17,11 @@ export default function Home() {
     <>
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-navy focus:px-4 focus:py-2 focus:text-mint"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-paper focus:px-4 focus:py-2 focus:text-accent"
       >
         Skip to content
       </a>
       <GridBackground />
-      <CursorGlow />
       <Navbar />
       <main id="main" className="relative z-[3]">
         <Hero />

@@ -5,10 +5,8 @@ import Reveal from "@/components/fx/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import { budgetRanges, contacts, projectTypes, site } from "@/lib/data";
 
-type Status = "idle" | "sent";
-
 export default function Contact() {
-  const [status, setStatus] = useState<Status>("idle");
+  const [status, setStatus] = useState<"idle" | "sent">("idle");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -30,69 +28,79 @@ export default function Contact() {
 
   const channels = [
     {
-      tag: "WHATSAPP",
+      label: "WhatsApp",
       value: contacts.whatsappDisplay,
       href: contacts.whatsappLink,
-      accent: "text-mint",
+      icon: "💬",
+      tint: "bg-sage-tint",
     },
     {
-      tag: "PROFESSIONAL EMAIL",
+      label: "Work email",
       value: contacts.professionalEmail,
       href: `mailto:${contacts.professionalEmail}`,
-      accent: "text-azure",
+      icon: "💼",
+      tint: "bg-tint",
     },
     {
-      tag: "PERSONAL EMAIL",
+      label: "Personal email",
       value: contacts.personalEmail,
       href: `mailto:${contacts.personalEmail}`,
-      accent: "text-violet",
+      icon: "✉️",
+      tint: "bg-terracotta-tint",
     },
   ];
 
   return (
-    <section id="contact" className="relative scroll-mt-20 overflow-hidden border-t border-secondary/[0.06] py-20 md:py-36">
-      <div
-        aria-hidden="true"
-        className="animate-aurora absolute -top-40 left-[15%] h-[480px] w-[70%] rounded-full blur-[140px]"
-        style={{ background: "radial-gradient(closest-side, rgba(77,163,255,0.1), transparent)" }}
-      />
-
+    <section id="contact" className="relative scroll-mt-20 border-t border-line py-20 md:py-36">
       <div className="shell relative">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <Reveal>
-              <SectionHeading index="08 / CONNECT" label="ESTABLISH CONNECTION" lines={["Ready to Build", "What's Next?"]} />
+              <SectionHeading
+                eyebrow="Get in touch"
+                lines={["Let's Build Something", "Together."]}
+              />
             </Reveal>
             <Reveal delay={120}>
-              <p className="mt-7 max-w-md text-base leading-relaxed text-secondary">
-                Have an idea, project, automation challenge, or digital opportunity in mind? Let&rsquo;s connect and explore how
-                technology can turn it into something meaningful.
+              <p className="mt-6 max-w-md text-base leading-relaxed text-soft">
+                Have an idea, a project, or a process you wish ran itself? I&rsquo;d love to hear about it — send a
+                message and I&rsquo;ll get back to you within a day.
               </p>
             </Reveal>
 
             <Reveal delay={200}>
-              <a href={`mailto:${contacts.professionalEmail}`} className="btn-primary group mt-10">
-                START A CONVERSATION
-                <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+              <a href={`mailto:${contacts.professionalEmail}`} className="btn-primary group mt-9">
+                Start a Conversation
+                <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
               </a>
             </Reveal>
 
             <Reveal delay={280}>
-              <ul className="mt-12 space-y-3">
+              <ul className="mt-10 space-y-3">
                 {channels.map((channel) => (
-                  <li key={channel.tag}>
+                  <li key={channel.label}>
                     <a
                       href={channel.href}
                       {...(channel.href.startsWith("http")
                         ? { target: "_blank", rel: "noopener noreferrer" }
                         : {})}
-                      className="group flex items-center justify-between rounded-xl border border-secondary/[0.09] bg-surface/40 px-5 py-4 transition-all duration-300 hover:border-mint/35 hover:bg-elevated/50 hover:shadow-[0_0_26px_-10px_rgba(127,224,210,0.4)]"
+                      className="card card-hover flex items-center justify-between px-5 py-4"
                     >
-                      <span>
-                        <span className={`tech-label block text-[9px] ${channel.accent}`}>{channel.tag}</span>
-                        <span className="mt-1 block font-tech text-sm text-ink">{channel.value}</span>
+                      <span className="flex items-center gap-3.5">
+                        <span
+                          className={`flex h-10 w-10 items-center justify-center rounded-full text-base ${channel.tint}`}
+                          aria-hidden="true"
+                        >
+                          {channel.icon}
+                        </span>
+                        <span>
+                          <span className="block text-xs font-medium text-faint">{channel.label}</span>
+                          <span className="block text-sm font-semibold text-ink">{channel.value}</span>
+                        </span>
                       </span>
-                      <span aria-hidden="true" className="text-dim transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-mint">
+                      <span aria-hidden="true" className="text-faint transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent">
                         ↗
                       </span>
                     </a>
@@ -102,31 +110,33 @@ export default function Contact() {
             </Reveal>
 
             <Reveal delay={340}>
-              <p className="tech-label mt-8 flex items-center gap-2 text-[9px] text-dim">
-                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-mint" />
-                RESPONSE.TIME / WITHIN 24H · {site.location.toUpperCase()}
+              <p className="mt-7 flex items-center gap-2 text-sm text-faint">
+                <span className="h-1.5 w-1.5 rounded-full bg-sage" aria-hidden="true" />
+                Usually replies within 24 hours · {site.location}
               </p>
             </Reveal>
           </div>
 
           <Reveal delay={150}>
-            <form onSubmit={handleSubmit} className="module-card cursor-default space-y-6 p-7 md:p-10" aria-label="Contact form">
-              <p className="tech-label text-[10px] text-mint/80">{"// TRANSMISSION.FORM"}</p>
+            <form onSubmit={handleSubmit} className="card space-y-6 p-7 md:p-10" aria-label="Contact form">
+              <p className="text-sm font-medium text-soft">
+                Tell me a little about your project — I&rsquo;ll reply personally.
+              </p>
 
-              <div className="grid gap-6 sm:grid-cols-2">
+              <div className="grid gap-5 sm:grid-cols-2">
                 <label className="block">
-                  <span className="tech-label mb-2.5 block text-[9px] text-dim transition-colors focus-within:text-mint">NAME</span>
-                  <input required name="name" type="text" placeholder="Your full name" className="field" autoComplete="name" />
+                  <span className="mb-2 block text-sm font-medium text-ink">Name</span>
+                  <input required name="name" type="text" placeholder="Your name" className="field" autoComplete="name" />
                 </label>
                 <label className="block">
-                  <span className="tech-label mb-2.5 block text-[9px] text-dim transition-colors focus-within:text-mint">EMAIL</span>
+                  <span className="mb-2 block text-sm font-medium text-ink">Email</span>
                   <input required name="email" type="email" placeholder="you@company.com" className="field" autoComplete="email" />
                 </label>
               </div>
 
-              <div className="grid gap-6 sm:grid-cols-2">
+              <div className="grid gap-5 sm:grid-cols-2">
                 <label className="block">
-                  <span className="tech-label mb-2.5 block text-[9px] text-dim transition-colors focus-within:text-mint">PROJECT TYPE</span>
+                  <span className="mb-2 block text-sm font-medium text-ink">Project type</span>
                   <select name="projectType" className="field appearance-none" defaultValue={projectTypes[0]}>
                     {projectTypes.map((type) => (
                       <option key={type} value={type}>{type}</option>
@@ -134,7 +144,7 @@ export default function Contact() {
                   </select>
                 </label>
                 <label className="block">
-                  <span className="tech-label mb-2.5 block text-[9px] text-dim transition-colors focus-within:text-mint">BUDGET RANGE</span>
+                  <span className="mb-2 block text-sm font-medium text-ink">Budget range</span>
                   <select name="budget" className="field appearance-none" defaultValue={budgetRanges[4]}>
                     {budgetRanges.map((range) => (
                       <option key={range} value={range}>{range}</option>
@@ -144,23 +154,23 @@ export default function Contact() {
               </div>
 
               <label className="block">
-                <span className="tech-label mb-2.5 block text-[9px] text-dim transition-colors focus-within:text-mint">MESSAGE</span>
+                <span className="mb-2 block text-sm font-medium text-ink">Message</span>
                 <textarea
                   required
                   name="message"
                   rows={4}
-                  placeholder="Describe your idea, goals, or the workflow you want to automate…"
+                  placeholder="Tell me about your idea, goals, or the task you'd love to automate…"
                   className="field resize-none"
                 />
               </label>
 
-              <div className="flex flex-wrap items-center gap-5 pt-2">
+              <div className="flex flex-wrap items-center gap-5 pt-1">
                 <button type="submit" className="btn-primary group cursor-pointer">
-                  {status === "sent" ? "OPENING MAIL CLIENT…" : "TRANSMIT MESSAGE"}
+                  {status === "sent" ? "Opening your email app…" : "Send Message"}
                   <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </button>
-                <p className="font-tech max-w-[240px] text-[9px] leading-relaxed text-dim">
-                  SUBMITS VIA YOUR MAIL CLIENT — NO DATA IS STORED ON THIS SITE.
+                <p className="max-w-[240px] text-xs leading-relaxed text-faint">
+                  This opens your email app with everything pre-filled — nothing is stored on this site.
                 </p>
               </div>
             </form>

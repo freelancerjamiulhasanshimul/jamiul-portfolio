@@ -55,7 +55,7 @@ export default function Counter({ value, suffix = "", duration = 1500 }: Counter
   return (
     <span ref={ref} className="tabular-nums">
       {display}
-      <span className="text-mint">{suffix}</span>
+      <span className="text-accent">{suffix}</span>
     </span>
   );
 }
