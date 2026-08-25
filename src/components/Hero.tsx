@@ -48,7 +48,7 @@ export default function Hero() {
             that feels easy from first call to launch.
           </p>
 
-          <div className="mt-7 flex flex-wrap items-center gap-4">
+          <div className="mt-7 flex flex-nowrap items-center gap-3 sm:gap-4">
             <a href="#contact" className="btn-primary group">
               Work With Me
               <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">

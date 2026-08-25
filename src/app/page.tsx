@@ -13,6 +13,7 @@ import Testimonials from "@/components/Testimonials";
 import TechStack from "@/components/TechStack";
 import GridBackground from "@/components/fx/GridBackground";
 import ScrollProgress from "@/components/fx/ScrollProgress";
+import CursorEffects from "@/components/fx/CursorEffects";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       </a>
       <ScrollProgress />
       <GridBackground />
+      <CursorEffects />
       <Navbar />
       <main id="main" className="relative z-[3]">
         <Hero />
