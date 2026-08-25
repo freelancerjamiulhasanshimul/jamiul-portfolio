@@ -146,8 +146,8 @@ export default function CursorEffects() {
 
       ringX += (mouseX - ringX) * 0.16;
       ringY += (mouseY - ringY) * 0.16;
-      dot.style.transform = `translate3d(${mouseX - 3}px, ${mouseY - 3}px, 0)`;
-      ring.style.transform = `translate3d(${ringX - 18}px, ${ringY - 18}px, 0) scale(${ringScale})`;
+      dot.style.transform = `translate3d(${mouseX - 5}px, ${mouseY - 5}px, 0)`;
+      ring.style.transform = `translate3d(${ringX - 20}px, ${ringY - 20}px, 0) scale(${ringScale})`;
 
       raf = requestAnimationFrame(draw);
     };
@@ -185,12 +185,12 @@ export default function CursorEffects() {
       <div
         ref={dotRef}
         aria-hidden="true"
-        className="pointer-events-none fixed left-0 top-0 z-[90] hidden h-1.5 w-1.5 rounded-full bg-accent opacity-0 lg:block"
+        className="pointer-events-none fixed left-0 top-0 z-[90] hidden h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_0_3px_rgba(255,255,255,0.7)] opacity-0 lg:block"
       />
       <div
         ref={ringRef}
         aria-hidden="true"
-        className="pointer-events-none fixed left-0 top-0 z-[90] hidden h-9 w-9 rounded-full border-[1.5px] border-accent/40 opacity-0 transition-[border-color] duration-300 lg:block lg:hover:border-honey"
+        className="pointer-events-none fixed left-0 top-0 z-[90] hidden h-10 w-10 rounded-full border-2 border-accent/50 bg-accent/[0.06] opacity-0 transition-[border-color,background-color] duration-300 lg:block lg:hover:border-honey"
       />
     </>
   );

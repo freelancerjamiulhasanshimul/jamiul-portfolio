@@ -40,102 +40,113 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <header
-      className={`animate-nav-drop fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled || open
-          ? "border-b border-line bg-paper/85 shadow-[0_8px_30px_-18px_rgba(43,43,43,0.15)] backdrop-blur-xl"
-          : "border-b border-transparent bg-transparent"
-      }`}
-    >
-      <nav className="shell flex h-[72px] items-center justify-between" aria-label="Primary">
-        <a
-          href="#home"
-          aria-label="Jamiul H. Shimul — home"
-          className="transition-all duration-300 hover:rotate-3 hover:scale-105"
+    <header className="animate-nav-drop fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-6 sm:pt-4">
+      <div className="mx-auto max-w-5xl">
+        <nav
+          aria-label="Primary"
+          className={`flex h-[60px] items-center justify-between gap-4 rounded-2xl border px-4 transition-all duration-500 sm:px-5 ${
+            scrolled || open
+              ? "border-line bg-paper/85 shadow-[0_16px_44px_-20px_rgba(43,43,43,0.28)] backdrop-blur-2xl"
+              : "border-line/60 bg-paper/50 backdrop-blur-lg"
+          }`}
         >
-          <Logo className="h-10 w-10" />
-        </a>
-
-        <ul className="hidden items-center gap-8 lg:flex">
-          {navLinks.map((link) => (
-            <li key={link.label}>
-              <a
-                href={link.href}
-                className={`relative py-1.5 text-[0.9rem] font-medium transition-colors duration-300 after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-left after:rounded-full after:transition-transform after:duration-300 hover:text-ink hover:after:scale-x-100 ${
-                  active === link.href
-                    ? "text-accent after:scale-x-100 after:bg-accent/70"
-                    : "text-soft after:scale-x-0 after:bg-honey"
-                }`}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        <div className="flex items-center gap-4">
-          <a href="#contact" className="btn-primary group hidden !px-5 !py-2.5 !text-sm lg:inline-flex">
-            Let&rsquo;s Talk
-            <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
+          <a
+            href="#home"
+            aria-label="Jamiul H. Shimul — home"
+            className="transition-transform duration-300 hover:rotate-3 hover:scale-105"
+          >
+            <Logo className="h-9 w-9" />
           </a>
 
-          <button
-            type="button"
-            onClick={() => setOpen((v) => !v)}
-            aria-expanded={open}
-            aria-label={open ? "Close menu" : "Open menu"}
-            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-lg border border-line bg-paper transition-colors duration-300 hover:border-accent/40 lg:hidden"
-          >
-            <span
-              className={`h-px w-5 bg-ink transition-transform duration-300 ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
-            />
-            <span
-              className={`h-px w-5 bg-ink transition-transform duration-300 ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
-            />
-          </button>
-        </div>
-      </nav>
+          <ul className="hidden items-center gap-1 lg:flex">
+            {navLinks.map((link) => (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  className={`relative block rounded-full px-3.5 py-2 text-[0.88rem] font-medium transition-all duration-300 ${
+                    active === link.href
+                      ? "bg-tint text-accent"
+                      : "text-soft hover:bg-cream hover:text-ink"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-      <div
-        className={`overflow-hidden transition-[max-height,opacity] duration-500 lg:hidden ${
-          open ? "max-h-[440px] opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <ul className="shell flex flex-col gap-1 pb-6 pt-2">
-          {navLinks.map((link, i) => (
+          <div className="flex items-center gap-2.5">
+            <a
+              href="#contact"
+              className="btn-primary group hidden !px-4 !py-2.5 !text-[0.85rem] lg:inline-flex"
+            >
+              Let&rsquo;s Talk
+              <span
+                aria-hidden="true"
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              >
+                →
+              </span>
+            </a>
+
+            <button
+              type="button"
+              onClick={() => setOpen((v) => !v)}
+              aria-expanded={open}
+              aria-label={open ? "Close menu" : "Open menu"}
+              className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-xl border border-line bg-paper transition-colors duration-300 hover:border-accent/40 lg:hidden"
+            >
+              <span
+                className={`h-px w-5 bg-ink transition-transform duration-300 ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
+              />
+              <span
+                className={`h-px w-5 bg-ink transition-transform duration-300 ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
+              />
+            </button>
+          </div>
+        </nav>
+
+        <div
+          className={`mt-2 overflow-hidden rounded-2xl border border-line bg-paper/90 backdrop-blur-2xl transition-[max-height,opacity,transform] duration-500 lg:hidden ${
+            open
+              ? "max-h-[440px] opacity-100 shadow-[0_16px_44px_-20px_rgba(43,43,43,0.28)]"
+              : "max-h-0 -translate-y-2 opacity-0"
+          }`}
+        >
+          <ul className="flex flex-col gap-1 p-3">
+            {navLinks.map((link, i) => (
+              <li
+                key={link.label}
+                className={`transition-all duration-300 ${
+                  open ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
+                }`}
+                style={{ transitionDelay: open ? `${i * 45}ms` : "0ms" }}
+              >
+                <a
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className={`block rounded-xl px-4 py-3 text-[0.95rem] font-medium transition-colors ${
+                    active === link.href
+                      ? "bg-tint text-accent"
+                      : "text-soft hover:bg-cream hover:text-ink"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
             <li
-              key={link.label}
-              className={`transition-all duration-300 ${
+              className={`pt-2 transition-all duration-300 ${
                 open ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
               }`}
-              style={{ transitionDelay: open ? `${i * 45}ms` : "0ms" }}
+              style={{ transitionDelay: open ? `${navLinks.length * 45}ms` : "0ms" }}
             >
-              <a
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className={`block rounded-xl px-4 py-3 text-[0.95rem] font-medium transition-colors ${
-                  active === link.href
-                    ? "bg-tint text-accent"
-                    : "text-soft hover:bg-cream hover:text-ink"
-                }`}
-              >
-                {link.label}
+              <a href="#contact" onClick={() => setOpen(false)} className="btn-primary w-full">
+                Let&rsquo;s Talk
               </a>
             </li>
-          ))}
-          <li
-            className={`pt-3 transition-all duration-300 ${
-              open ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
-            }`}
-            style={{ transitionDelay: open ? `${navLinks.length * 45}ms` : "0ms" }}
-          >
-            <a href="#contact" onClick={() => setOpen(false)} className="btn-primary w-full">
-              Let&rsquo;s Talk
-            </a>
-          </li>
-        </ul>
+          </ul>
+        </div>
       </div>
     </header>
   );

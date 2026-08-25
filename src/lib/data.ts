@@ -87,7 +87,6 @@ export const skillGroups = [
       "Elementor",
       "Yoast SEO",
       "Rank Math",
-      "WP Rocket",
       "Shopify",
     ],
   },

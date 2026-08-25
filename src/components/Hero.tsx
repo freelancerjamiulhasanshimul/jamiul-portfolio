@@ -5,7 +5,7 @@ import { quickFacts, site } from "@/lib/data";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-[72px]">
+    <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-[108px]">
       <div className="shell relative z-10 grid items-center gap-14 pb-16 pt-10 sm:pb-20 sm:pt-14 lg:grid-cols-[1.04fr_0.96fr] lg:gap-8 lg:pb-28">
         <div>
           <p className="inline-flex items-center gap-2.5 rounded-full border border-line bg-paper px-4 py-2 text-sm font-medium text-soft shadow-[0_2px_10px_-4px_rgba(43,43,43,0.08)]">
