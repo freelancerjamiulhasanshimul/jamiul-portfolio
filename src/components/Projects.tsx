@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Reveal from "@/components/fx/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import { projects, type ProjectVisual } from "@/lib/data";
@@ -170,6 +173,8 @@ const visuals: Record<ProjectVisual, React.ReactNode> = {
 };
 
 export default function Projects() {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <section id="work" className="relative scroll-mt-20 py-20 md:py-36">
       <div className="shell">
@@ -183,8 +188,10 @@ export default function Projects() {
         <div className="mt-14 space-y-12 md:mt-20 md:space-y-16">
           {projects.map((project, i) => {
             const flipped = i % 2 === 1;
+            const mobileHidden = i >= 2 && !expanded;
             return (
-              <Reveal key={project.title} delay={60}>
+              <div key={project.title} className={mobileHidden ? "hidden lg:block" : ""}>
+              <Reveal delay={60}>
                 <article className="group/project grid items-center gap-7 lg:grid-cols-2 lg:gap-14">
                   <div className={flipped ? "hidden md:block lg:order-2" : "hidden md:block"}>
                     <BrowserFrame title={project.title.toLowerCase().replace(/\s+/g, "") + ".app"}>
@@ -216,8 +223,23 @@ export default function Projects() {
                   </div>
                 </article>
               </Reveal>
+              </div>
             );
           })}
+        </div>
+
+        <div className="mt-12 text-center lg:hidden">
+          <button
+            type="button"
+            onClick={() => setExpanded((v) => !v)}
+            className="btn-secondary !px-6"
+            aria-expanded={expanded}
+          >
+            {expanded ? "Show fewer projects" : "See more projects"}
+            <span aria-hidden="true" className="inline-block transition-transform duration-300">
+              {expanded ? "↑" : "↓"}
+            </span>
+          </button>
         </div>
       </div>
     </section>

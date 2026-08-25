@@ -27,10 +27,10 @@ export default function Services() {
                 <p className="mt-1.5 text-sm font-medium text-accent">{service.audience}</p>
                 <p className="mt-3 text-[0.95rem] leading-relaxed text-soft">{service.description}</p>
 
-                <p className="mt-6 text-xs font-semibold uppercase tracking-wide text-faint">
+                <p className="mt-6 hidden text-xs font-semibold uppercase tracking-wide text-faint sm:block">
                   What&rsquo;s included
                 </p>
-                <ul className="mt-3 flex flex-wrap gap-2">
+                <ul className="mt-3 hidden flex-wrap gap-2 sm:flex">
                   {service.capabilities.map((cap) => (
                     <li key={cap} className="chip">
                       {cap}

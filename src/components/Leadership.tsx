@@ -55,11 +55,11 @@ export default function Leadership() {
 
           <div className="flex flex-col justify-center">
             <p className="mb-5 text-sm font-semibold text-faint">What I focus on day to day</p>
-            <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+            <ul className="grid grid-cols-2 gap-2.5 sm:gap-3 lg:grid-cols-1 xl:grid-cols-2">
               {leadershipPoints.map((point, i) => (
                 <li key={point}>
                   <Reveal delay={i * 90} className="h-full">
-                    <div className="card card-hover flex h-full items-center gap-3 px-4 py-3.5">
+                    <div className="card card-hover flex h-full items-center gap-2.5 px-3 py-3 sm:gap-3 sm:px-4 sm:py-3.5">
                       <span
                         className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-sage-tint text-sage"
                         aria-hidden="true"
@@ -68,7 +68,7 @@ export default function Leadership() {
                           <path d="M4 12.5 9.5 18 20 6.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </span>
-                      <span className="text-sm font-medium text-ink">{point}</span>
+                      <span className="text-[13px] font-medium leading-snug text-ink sm:text-sm">{point}</span>
                     </div>
                   </Reveal>
                 </li>

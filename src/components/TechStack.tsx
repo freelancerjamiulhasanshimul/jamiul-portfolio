@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Reveal from "@/components/fx/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import { skillGroups } from "@/lib/data";
@@ -50,6 +53,8 @@ function GroupIcon({ id }: { id: string }) {
 }
 
 export default function TechStack() {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <section id="expertise" className="relative scroll-mt-20 py-20 md:py-36">
       <div className="shell">
@@ -63,8 +68,9 @@ export default function TechStack() {
         <div className="mt-14 space-y-12 md:mt-20">
           {skillGroups.map((group, gi) => {
             const accent = accents[group.accent];
+            const mobileHidden = gi >= 2 && !expanded;
             return (
-              <div key={group.id}>
+              <div key={group.id} className={mobileHidden ? "hidden lg:block" : ""}>
                 <Reveal delay={60}>
                   <div className="mb-5 flex flex-wrap items-baseline gap-x-4 gap-y-1">
                     <h3 className="font-display text-2xl font-semibold text-ink">{group.title}</h3>
@@ -90,6 +96,20 @@ export default function TechStack() {
               </div>
             );
           })}
+        </div>
+
+        <div className="mt-10 text-center lg:hidden">
+          <button
+            type="button"
+            onClick={() => setExpanded((v) => !v)}
+            className="btn-secondary !px-6"
+            aria-expanded={expanded}
+          >
+            {expanded ? "Show fewer tools" : "See all tools"}
+            <span aria-hidden="true" className="transition-transform duration-300 inline-block">
+              {expanded ? "↑" : "↓"}
+            </span>
+          </button>
         </div>
       </div>
     </section>
