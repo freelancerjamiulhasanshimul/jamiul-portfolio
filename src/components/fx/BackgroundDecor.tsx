@@ -1,11 +1,16 @@
 const glyphs = [
-  { text: "</>", top: "16%", left: "6%", size: "3.4rem", color: "#4a6c8f", dur: "14s", delay: "0s", mobile: false },
-  { text: "{ }", top: "24%", right: "8%", size: "2.8rem", color: "#c08a2e", dur: "17s", delay: "-4s", mobile: true },
-  { text: "=>", top: "52%", left: "3%", size: "2.4rem", color: "#7c9885", dur: "13s", delay: "-7s", mobile: false },
-  { text: "</", top: "62%", right: "5%", size: "3rem", color: "#4a6c8f", dur: "18s", delay: "-2s", mobile: true },
-  { text: "( )", top: "78%", left: "10%", size: "2.2rem", color: "#c08a2e", dur: "15s", delay: "-9s", mobile: false },
-  { text: ";", top: "84%", right: "14%", size: "3.6rem", color: "#7c9885", dur: "12s", delay: "-5s", mobile: false },
-  { text: "#", top: "40%", right: "22%", size: "1.9rem", color: "#4a6c8f", dur: "16s", delay: "-11s", mobile: false },
+  { text: "</>", top: "14%", left: "5%", size: "3.6rem", color: "#4a6c8f", dur: "14s", delay: "0s", mobile: false },
+  { text: "{ }", top: "22%", right: "7%", size: "3rem", color: "#c08a2e", dur: "17s", delay: "-4s", mobile: true },
+  { text: "=>", top: "50%", left: "2.5%", size: "2.6rem", color: "#7c9885", dur: "13s", delay: "-7s", mobile: false },
+  { text: "</", top: "60%", right: "4%", size: "3.2rem", color: "#4a6c8f", dur: "18s", delay: "-2s", mobile: true },
+  { text: "( )", top: "76%", left: "8%", size: "2.4rem", color: "#c08a2e", dur: "15s", delay: "-9s", mobile: false },
+  { text: ";", top: "83%", right: "13%", size: "3.8rem", color: "#7c9885", dur: "12s", delay: "-5s", mobile: false },
+  { text: "#", top: "38%", right: "20%", size: "2rem", color: "#4a6c8f", dur: "16s", delay: "-11s", mobile: false },
+  { text: "&&", top: "8%", left: "28%", size: "2.2rem", color: "#7c9885", dur: "15s", delay: "-3s", mobile: false },
+  { text: "[ ]", top: "44%", left: "16%", size: "2.3rem", color: "#c08a2e", dur: "13s", delay: "-6s", mobile: false },
+  { text: "/>", top: "68%", left: "24%", size: "2.5rem", color: "#4a6c8f", dur: "17s", delay: "-8s", mobile: false },
+  { text: "!==", top: "30%", right: "32%", size: "1.9rem", color: "#c08a2e", dur: "14s", delay: "-10s", mobile: false },
+  { text: "::", top: "88%", right: "28%", size: "2.6rem", color: "#4a6c8f", dur: "16s", delay: "-6.5s", mobile: false },
 ];
 
 const dots = [
@@ -15,6 +20,10 @@ const dots = [
   { top: "70%", right: "30%", delay: "-0.6s" },
   { top: "30%", left: "55%", delay: "-3s" },
   { top: "86%", left: "45%", delay: "-1.8s" },
+  { top: "12%", left: "70%", delay: "-2s" },
+  { top: "48%", right: "8%", delay: "-3.4s" },
+  { top: "64%", left: "60%", delay: "-0.9s" },
+  { top: "90%", right: "12%", delay: "-2.8s" },
 ];
 
 export default function BackgroundDecor() {
@@ -23,7 +32,7 @@ export default function BackgroundDecor() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: "radial-gradient(circle, rgba(74,108,143,0.09) 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(circle, rgba(74,108,143,0.11) 1px, transparent 1px)",
           backgroundSize: "30px 30px",
           maskImage: "radial-gradient(ellipse 75% 60% at 50% 38%, black 30%, transparent 75%)",
           WebkitMaskImage: "radial-gradient(ellipse 75% 60% at 50% 38%, black 30%, transparent 75%)",
@@ -50,7 +59,7 @@ export default function BackgroundDecor() {
             right: g.right,
             fontSize: g.size,
             color: g.color,
-            opacity: 0.09,
+            opacity: 0.14,
             animationDuration: g.dur,
             animationDelay: g.delay,
             animationTimingFunction: "ease-in-out",
