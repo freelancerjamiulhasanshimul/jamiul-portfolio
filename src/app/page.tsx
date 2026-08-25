@@ -12,6 +12,7 @@ import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import TechStack from "@/components/TechStack";
 import GridBackground from "@/components/fx/GridBackground";
+import BackgroundDecor from "@/components/fx/BackgroundDecor";
 import ScrollProgress from "@/components/fx/ScrollProgress";
 import CursorEffects from "@/components/fx/CursorEffects";
 
@@ -26,6 +27,7 @@ export default function Home() {
       </a>
       <ScrollProgress />
       <GridBackground />
+      <BackgroundDecor />
       <CursorEffects />
       <Navbar />
       <main id="main" className="relative z-[3]">

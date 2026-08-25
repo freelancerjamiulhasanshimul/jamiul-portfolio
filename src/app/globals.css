@@ -23,6 +23,7 @@
   --animate-dash-flow: dash-flow 2.6s linear infinite;
   --animate-node-pulse: node-pulse 2.4s ease-in-out infinite;
   --animate-badge-glow: badge-glow 3s ease-in-out infinite;
+  --animate-dot-pulse: dot-pulse 4s ease-in-out infinite;
 
   @keyframes float {
     0%,
@@ -31,6 +32,26 @@
     }
     50% {
       transform: translateY(-10px);
+    }
+  }
+  @keyframes drift {
+    0%,
+    100% {
+      transform: translateY(0) rotate(-4deg);
+    }
+    50% {
+      transform: translateY(-22px) rotate(5deg);
+    }
+  }
+  @keyframes dot-pulse {
+    0%,
+    100% {
+      opacity: 0.15;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.6);
     }
   }
   @keyframes nav-drop {
