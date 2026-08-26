@@ -25,8 +25,8 @@ export default function CtaBand() {
                 <span className="block italic text-accent">Let&rsquo;s figure it out together.</span>
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-soft">
-                Tell me what you&rsquo;re trying to achieve — even if it&rsquo;s just a rough idea. I&rsquo;ll help
-                you find the simplest path forward, no pressure and no jargon.
+                Tell me what you&rsquo;re trying to achieve, even if it&rsquo;s just a rough idea. I&rsquo;ll help
+                you find the simplest path forward. No pressure, no jargon.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
                 <a

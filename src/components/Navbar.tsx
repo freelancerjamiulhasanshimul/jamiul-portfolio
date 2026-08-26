@@ -52,7 +52,7 @@ export default function Navbar() {
         >
           <a
             href="#home"
-            aria-label="Jamiul H. Shimul — home"
+            aria-label="Jamiul H. Shimul, home"
             className="transition-transform duration-300 hover:rotate-3 hover:scale-105"
           >
             <Logo className="h-9 w-9" />

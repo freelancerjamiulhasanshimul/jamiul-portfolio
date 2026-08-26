@@ -1,10 +1,10 @@
 export const site = {
   name: "Jamiul H. Shimul",
   role: "Full Stack Web Developer & AI Automation Specialist",
-  headline: "I help businesses look sharp online — and",
+  headline: "I help businesses look sharp online and",
   headlineAccent: "work smarter behind the scenes.",
   statement:
-    "I build websites, online stores, and smart automations that solve real problems — and I make the process feel easy from first call to launch.",
+    "I build websites, online stores, and smart automations that solve real problems. I also make the process feel easy, from first call to launch.",
   description:
     "Jamiul H. Shimul is a Full Stack Web Developer and AI Automation Specialist, and the Managing Director of Webrayz IT Solutions, helping businesses grow through thoughtful web development and automation.",
   url: "https://jamiul-portfolio-sigma.vercel.app",
@@ -104,7 +104,7 @@ export const services = [
     title: "WordPress Development",
     audience: "For businesses that want a site they can update themselves.",
     description:
-      "A beautiful, easy-to-manage WordPress website built around your business — fast, flexible, and ready to grow with you.",
+      "A beautiful WordPress website built around your business: fast, flexible, easy to manage, and ready to grow with you.",
     capabilities: [
       "Custom themes",
       "SEO setup",
@@ -117,7 +117,7 @@ export const services = [
     title: "Custom Website Development",
     audience: "For ideas that don't fit a template.",
     description:
-      "A website designed and built from scratch for exactly what you need — no templates, no compromises, clean code throughout.",
+      "A website designed and built from scratch for exactly what you need. No templates, no compromises, and clean code throughout.",
     capabilities: [
       "Hand-crafted design",
       "Modern frameworks",
@@ -130,7 +130,7 @@ export const services = [
     title: "E-Commerce Solutions",
     audience: "For sellers ready to grow beyond marketplaces.",
     description:
-      "An online store your customers will love using — from browsing to checkout — and that you can manage without a headache.",
+      "An online store your customers will love, from browsing to checkout, and that you can manage without a headache.",
     capabilities: [
       "WooCommerce & Shopify",
       "Payment setup",
@@ -143,7 +143,7 @@ export const services = [
     title: "Web Applications",
     audience: "For processes that have outgrown spreadsheets.",
     description:
-      "Web apps built around how your business actually works — booking systems, dashboards, portals, and everything in between.",
+      "Web apps built around how your business actually works. Booking systems, dashboards, portals, and everything in between.",
     capabilities: [
       "Frontend & backend",
       "Databases",
@@ -156,7 +156,7 @@ export const services = [
     title: "AI Automation",
     audience: "For teams spending hours on work a machine should do.",
     description:
-      "If your team spends hours on repetitive tasks, automation can give them that time back. I design AI-powered workflows that connect your tools and handle the busywork — reliably and quietly in the background.",
+      "If your team spends hours on repetitive tasks, automation can give them that time back. I design AI-powered workflows that connect your tools and handle the busywork, reliably and quietly in the background.",
     capabilities: [
       "AI-powered workflows",
       "Process automation",
@@ -174,7 +174,7 @@ export const projects = [
   {
     category: "SaaS Platform",
     title: "NexaFlow",
-    outcome: "Helping teams spend less time managing projects — and more time doing them.",
+    outcome: "Helping teams spend less time managing projects and more time doing them.",
     description:
       "A streamlined project management platform designed to help modern teams organize workflows, track performance, and collaborate efficiently.",
     stack: "React · Node.js · MongoDB",
@@ -234,12 +234,12 @@ export const processSteps = [
   {
     title: "You'll always know where things stand.",
     description:
-      "Regular updates and honest timelines — no chasing me for progress, and no surprises at the end.",
+      "Regular updates and honest timelines. No chasing me for progress, and no surprises at the end.",
   },
   {
     title: "I bring ideas, not just execution.",
     description:
-      "I'll share what I think the right move is, and why. The final call is always yours — but you won't be making it alone.",
+      "I'll share what I think the right move is, and why. The final call is always yours, but you won't be making it alone.",
   },
   {
     title: "I adapt to the way you work.",
@@ -260,7 +260,7 @@ export const leadershipPoints = [
 export const testimonials = [
   {
     quote:
-      "This is a placeholder — replace it with a real client quote about working together, communication, and results.",
+      "This is a placeholder. Replace it with a real client quote about working together, communication, and results.",
     name: "Client Name",
     role: "Founder",
     company: "Company Name",
@@ -268,7 +268,7 @@ export const testimonials = [
   },
   {
     quote:
-      "This is a placeholder — replace it with feedback about an automation project or a website build.",
+      "This is a placeholder. Replace it with feedback about an automation project or a website build.",
     name: "Client Name",
     role: "Marketing Lead",
     company: "Company Name",
@@ -276,7 +276,7 @@ export const testimonials = [
   },
   {
     quote:
-      "This is a placeholder — replace it with words about long-term collaboration and trusted partnership.",
+      "This is a placeholder. Replace it with words about long-term collaboration and trusted partnership.",
     name: "Client Name",
     role: "Operations Manager",
     company: "Company Name",

@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <a
               href="#home"
-              aria-label="Jamiul H. Shimul — back to home"
+              aria-label="Jamiul H. Shimul, back to home"
               className="inline-block transition-transform duration-300 hover:scale-105"
             >
               <Logo className="h-12 w-12" />

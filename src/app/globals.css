@@ -91,7 +91,7 @@
 
 @theme inline {
   --font-display: var(--font-display-src), Georgia, "Times New Roman", serif;
-  --font-body: var(--font-body-src), ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Clash Display", var(--font-display-src), ui-sans-serif, system-ui, sans-serif;
 }
 
 html {
@@ -101,7 +101,7 @@ html {
 body {
   background-color: var(--color-cream);
   color: var(--color-ink);
-  font-family: var(--font-body-src), ui-sans-serif, system-ui, sans-serif;
+  font-family: "Clash Display", var(--font-display-src), ui-sans-serif, system-ui, sans-serif;
   overflow-x: clip;
 }
 

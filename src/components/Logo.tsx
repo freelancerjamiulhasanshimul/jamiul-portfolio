@@ -9,7 +9,7 @@ export default function Logo({ className = "h-9 w-9" }: { className?: string }) 
       viewBox="0 0 40 40"
       fill="none"
       role="img"
-      aria-label="Jamiul H. Shimul — home"
+      aria-label="Jamiul H. Shimul, home"
       className={className}
     >
       <defs>

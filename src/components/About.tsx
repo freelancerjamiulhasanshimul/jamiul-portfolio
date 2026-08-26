@@ -41,7 +41,7 @@ export default function About() {
                   <div className="relative overflow-hidden rounded-[1.2rem]">
                     <Image
                       src="/portrait.jpg"
-                      alt={`${site.name} — professional portrait`}
+                      alt={`${site.name}, professional portrait`}
                       width={820}
                       height={1457}
                       sizes="380px"
@@ -75,7 +75,7 @@ export default function About() {
           <div className="space-y-7 text-base leading-relaxed text-soft md:text-lg">
             <Reveal delay={100}>
               <p className="border-l-2 border-accent/40 pl-6 font-display text-xl italic leading-relaxed text-ink md:text-2xl">
-                Great technology should feel effortless — for the people building it, and the people using it.
+                Great technology should feel effortless, for the people building it and the people using it.
               </p>
             </Reveal>
             <Reveal delay={160}>
@@ -88,7 +88,7 @@ export default function About() {
             <Reveal delay={220}>
               <p>
                 My background in English Literature shaped how I think about structure, story, and communication.
-                It&rsquo;s why I care so much about clarity — in code, in design, and in how we work together.
+                It&rsquo;s why I care so much about clarity: in code, in design, and in how we work together.
               </p>
             </Reveal>
             <Reveal delay={280}>
@@ -109,7 +109,7 @@ export default function About() {
                 >
                   Webrayz IT Solutions
                 </a>{" "}
-                as Managing Director — coordinating projects, working closely with clients, and helping our team
+                as Managing Director. I coordinate projects, work closely with clients, and help our team
                 deliver work we&rsquo;re proud of.
               </p>
             </Reveal>

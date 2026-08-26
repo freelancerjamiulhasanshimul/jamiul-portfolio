@@ -35,8 +35,8 @@ export default function Leadership() {
               </div>
 
               <p className="mt-7 font-display text-xl leading-relaxed text-ink md:text-2xl">
-                As Managing Director, I help guide every project from the first conversation to final delivery —
-                combining hands-on technical knowledge with clear communication and careful coordination.
+                As Managing Director, I help guide every project from the first conversation to final delivery.
+                I combine hands-on technical knowledge with clear communication and careful coordination.
               </p>
               <p className="mt-5 text-[0.95rem] leading-relaxed text-soft md:text-base">
                 My role is understanding what clients actually need, supporting the team that builds it, and making

@@ -44,7 +44,7 @@ export default function Hero() {
           </div>
 
           <p className="mt-5 max-w-lg text-[0.95rem] leading-relaxed text-soft">
-            Websites, online stores, and smart automations that solve real problems — with a process
+            Websites, online stores, and smart automations that solve real problems, with a process
             that feels easy from first call to launch.
           </p>
 
@@ -87,7 +87,7 @@ export default function Hero() {
             <div className="relative overflow-hidden rounded-[1.55rem]">
               <Image
                 src="/portrait.jpg"
-                alt={`${site.name} — professional portrait`}
+                alt={`${site.name}, professional portrait`}
                 width={820}
                 height={1457}
                 preload

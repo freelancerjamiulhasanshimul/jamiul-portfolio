@@ -11,7 +11,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    const subject = `Project Inquiry — ${data.get("projectType")} (${data.get("name")})`;
+    const subject = `Project Inquiry: ${data.get("projectType")} (${data.get("name")})`;
     const body = [
       `Name: ${data.get("name")}`,
       `Email: ${data.get("email")}`,
@@ -70,7 +70,7 @@ export default function Contact() {
         </Reveal>
         <Reveal delay={120}>
           <p className="mx-auto mt-5 max-w-xl text-center text-base leading-relaxed text-soft">
-            Have an idea, a project, or a process you wish ran itself? Send a message — I&rsquo;ll
+            Have an idea, a project, or a process you wish ran itself? Send a message and I&rsquo;ll
             reply personally within 24 hours.
           </p>
         </Reveal>
@@ -188,7 +188,7 @@ export default function Contact() {
                   </span>
                 </button>
                 <p className="text-xs leading-relaxed text-faint">
-                  Send opens Gmail in a new tab with everything pre-filled — just hit send there.
+                  Send opens Gmail in a new tab with everything pre-filled, so you just hit send there.
                   Nothing is stored on this site.
                 </p>
             </div>
