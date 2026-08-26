@@ -16,10 +16,6 @@ export default function Metrics() {
                 <dt className="mt-3 block text-sm font-medium text-faint transition-colors duration-300 group-hover:text-accent">
                   {metric.label}
                 </dt>
-                <span
-                  aria-hidden="true"
-                  className="mx-auto mt-5 block h-0.5 w-8 rounded-full bg-accent/30 transition-all duration-500 group-hover:w-14 group-hover:bg-accent/60 lg:mx-0"
-                />
               </div>
             </Reveal>
           ))}

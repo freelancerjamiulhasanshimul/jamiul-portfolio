@@ -28,8 +28,7 @@ export default function Hero() {
             Full Stack Web Developer <span className="text-faint">&</span> AI Automation Specialist
           </p>
 
-          <div className="mt-4 flex items-center gap-3" aria-hidden="true">
-            <span className="h-px w-10 bg-accent/40" />
+          <div className="mt-4" aria-hidden="false">
             <p className="text-sm text-faint">
               Managing Director at{" "}
               <a
